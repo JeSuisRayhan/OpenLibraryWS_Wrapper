@@ -45,9 +45,11 @@ steps:
     failure: ignore
     volumes:
       - name: docs
-        path: /Documentations
+        path: /docs
     commands:
       - /entrypoint.sh
+    environment: 
+      NODOXYGEN: true
     when:
       branch:
         - master
