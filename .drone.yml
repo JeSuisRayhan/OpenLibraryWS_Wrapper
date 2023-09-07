@@ -45,7 +45,7 @@ steps:
     failure: ignore
     volumes:
       - name: docs
-        path: /docs
+        path: /Documentations
     commands:
       - /entrypoint.sh
     when:
