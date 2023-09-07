@@ -49,6 +49,3 @@ steps:
     commands:
   - cd Documentation/doxygen
   - /entrypoint.sh
-volumes:
-  - names: docs
-  - temp: {}
