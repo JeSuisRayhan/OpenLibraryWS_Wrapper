@@ -48,12 +48,3 @@ steps:
         path: /docs
     commands:
       - /entrypoint.sh
-    environment: 
-      NODOXYGEN: true
-    when:
-      branch:
-        - master
-      event:
-        - push
-        - pull_request
-    depends_on: [build,tests]
