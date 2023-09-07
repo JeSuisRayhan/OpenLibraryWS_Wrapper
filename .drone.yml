@@ -47,8 +47,8 @@ steps:
       - name: docs
         path: /docs
     commands:
-      - cd Documentation/doxygen
-      - /entrypoint.sh
-  volumes:
-    - names: docs
-      temp:{}
+  - cd Documentation/doxygen
+  - /entrypoint.sh
+volumes:
+  - names: docs
+  - temp: {}
