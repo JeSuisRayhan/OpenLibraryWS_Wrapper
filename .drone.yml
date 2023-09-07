@@ -47,13 +47,8 @@ steps:
       - name: docs
         path: /docs
     commands:
+      - cd Documentation/doxygen
       - /entrypoint.sh
-    environment: 
-      NODOXYGEN: true
-    when:
-      branch:
-        - master
-      event:
-        - push
-        - pull_request
-    depends_on: [build,tests]
+  volumes:
+    - names: docs
+      temp:{}
