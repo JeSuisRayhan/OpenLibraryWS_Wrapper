@@ -6,22 +6,22 @@ trigger:
   event:
     - push
 
- steps:
-#   - name: build
-#     image: mcr.microsoft.com/dotnet/sdk:7.0
-#     commands:
-#       - cd Sources/
-#       - dotnet restore OpenLibraryWS_Wrapper.sln
-#       - dotnet build OpenLibraryWS_Wrapper.sln -c Release --no-restore
-#     secrets: [ SecretForWebServiceCSharp ]
+steps:
+  - name: build
+    image: mcr.microsoft.com/dotnet/sdk:7.0
+    commands:
+      - cd Sources/
+      - dotnet restore OpenLibraryWS_Wrapper.sln
+      - dotnet build OpenLibraryWS_Wrapper.sln -c Release --no-restore
+    secrets: [ SecretForWebServiceCSharp ]
 
-#   - name: tests
-#     image: mcr.microsoft.com/dotnet/sdk:7.0
-#     commands:
-#       - cd Sources/
-#       - dotnet restore OpenLibraryWS_Wrapper.sln
-#       - dotnet test OpenLibraryWS_Wrapper.sln --no-restore
-#     depends_on: [build]
+  - name: tests
+    image: mcr.microsoft.com/dotnet/sdk:7.0
+    commands:
+      - cd Sources/
+      - dotnet restore OpenLibraryWS_Wrapper.sln
+      - dotnet test OpenLibraryWS_Wrapper.sln --no-restore
+    depends_on: [build]
 
   # - name: code-inspection
   #   image: hub.codefirst.iut.uca.fr/marc.chevaldonne/codefirst-dronesonarplugin-dotnet7
