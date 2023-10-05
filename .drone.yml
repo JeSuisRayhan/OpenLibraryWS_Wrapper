@@ -65,7 +65,7 @@ steps:
     image: plugins/docker
     settings:
        dockerfile: Sources/OpenLibraryWrapper/Dockerfile
-       context: Sources/OpenLibraryWrapper
+       context: Sources
        registry: hub.codefirst.iut.uca.fr
        repo: hub.codefirst.iut.uca.fr/rayhan.hassou/openLibraryws_wrapper
        username:
