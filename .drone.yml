@@ -71,4 +71,4 @@ steps:
        username:
          from_secret: LOGINTOTO
        password:
-         from_secret: PASSWORDTOTO 
+         from_secret: PasswordForCodeFirst
