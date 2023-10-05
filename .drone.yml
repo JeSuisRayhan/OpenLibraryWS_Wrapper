@@ -50,6 +50,16 @@ steps:
         - cd Documentation/doxygen
         - /entrypoint.sh
 
+---
+kind: pipeline
+type: docker
+name: OpenLibraryWSPipelineCD
+
+trigger:
+  event:
+    - push
+
+steps:
     # docker image build
   - name: docker-build-and-push
     image: plugins/docker
