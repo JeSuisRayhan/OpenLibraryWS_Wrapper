@@ -67,7 +67,7 @@ steps:
        dockerfile: Sources/OpenLibraryWrapper/Dockerfile
        context: Sources/
        registry: hub.codefirst.iut.uca.fr
-       repo: hub.codefirst.iut.uca.fr/rayhan.hassou/openLibraryws_wrapper
+       repo: hub.codefirst.iut.uca.fr/rayhan.hassou/openlibraryws_wrapper
        username:
          from_secret: login
        password:
