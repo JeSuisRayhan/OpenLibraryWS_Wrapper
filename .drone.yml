@@ -69,6 +69,6 @@ steps:
        registry: hub.codefirst.iut.uca.fr
        repo: hub.codefirst.iut.uca.fr/rayhan.hassou/OpenLibraryWS_Wrapper
        username:
-         from_secret: UsernameForCodefirst
+         from_secret: login
        password:
-         from_secret: PasswordForCodeFirst
+         from_secret: password
