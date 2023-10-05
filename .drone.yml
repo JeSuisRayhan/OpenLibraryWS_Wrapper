@@ -64,8 +64,8 @@ steps:
   - name: docker-build-and-push
     image: plugins/docker
     settings:
-       dockerfile: Sources/OpenLibraryClient/Dockerfile
-       context: Sources/OpenLibraryClient
+       dockerfile: Sources/OpenLibraryWrapper/Dockerfile
+       context: Sources/OpenLibraryWrapper
        registry: hub.codefirst.iut.uca.fr
        repo: hub.codefirst.iut.uca.fr/rayhan.hassou/openLibraryws_wrapper
        username:
