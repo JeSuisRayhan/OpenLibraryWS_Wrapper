@@ -71,4 +71,4 @@ steps:
        username:
          from_secret: login
        password:
-         from_secret: password
+         from_secret: password 
