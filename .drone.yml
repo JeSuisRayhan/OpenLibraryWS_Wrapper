@@ -90,3 +90,20 @@ steps:
           from_secret: db_user
         CODEFIRST_CLIENTDRONE_ENV_MARIADB_PASSWORD:
           from_secret: db_password
+
+   # container deployment
+  - name: deploy-container
+    image: hub.codefirst.iut.uca.fr/thomas.bellembois/codefirst-dockerproxy-clientdrone:latest
+    environment:
+        IMAGENAME:  hub.codefirst.iut.uca.fr/rayhan.hassou/openlibraryws_wrapper:latest
+        CONTAINERNAME: wswrapper
+        COMMAND: create
+        OVERWRITE: true
+        CODEFIRST_CLIENTDRONE_ENV_DB_SERVER:
+          from_secret: db_server
+        CODEFIRST_CLIENTDRONE_ENV_DB_USER:
+          from_secret: db_user
+        CODEFIRST_CLIENTDRONE_ENV_DB_PASSWORD:
+          from_secret: db_password
+        CODEFIRST_CLIENTDRONE_ENV_DB_DATABASE:
+          from_secret: db_database
